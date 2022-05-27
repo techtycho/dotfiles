@@ -83,11 +83,46 @@ Now go to the new directory, it should be called `~/dotfiles`.
 $ cd ~/dotfiles
 ```
 
-### 
+### **Step 2:** Extract the Icon Theme
+
+The Icon Theme we will be using is called oomox-aesthetic. Thanks to [ilham25](https://github.com/ilham25) for creating this awesome Icon Theme.
+
+The Icon Theme is not present in the core repositories, nor the AUR. Instead, it is located in the `.icons/` directory in this repository. I made sure I included the Light and Dark themes.
+
+The Icon Themes are just `.tar.xz` files. Go to the `.icons/` directory, then extract the files.
+
+```bash
+$ cd .icons/
+$ tar -Jxvf oomox-aesthetic-dark.tar.xz
+```
+
+Extract the other file if you want the Light theme:
+
+```bash
+$ tar -Jxvf oomox-aesthetic-light.tar.xz
+```
+
+Then, move the two output directories to `/usr/share/icons/`, make sure you have `sudo` privellages.
+
+```bash
+$ sudo cp -r oomox-aesthetic-dark oomox-aesthetic-light /usr/share/icons/
+```
+
+Now delete unnecessary files:
+
+```bash
+$ rm -r oomox-aesthetic-* *.tar.xz
+```
+
+### **Step 3:** Configure Programs Indivually
 
 Now you will see how to install the configuration to every program indivually.
 
 > Each program will have its own section.
+
+### AwesomeWM
+
+
 
 <hr />
 
