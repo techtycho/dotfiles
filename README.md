@@ -18,6 +18,7 @@
 - [Installation](#Installation)
   - [AwesomeWM](#AwesomeWM)
 - [Wallpapers](#Wallpapers)
+- [Credits](#credits)
 
 <hr />
 
@@ -63,13 +64,11 @@ JetBrains Mono | [nerd-fonts-jetbrain-mono<sup>AUR</sup>](https://aur.archlinux.
 
 <br />
 
-[ilham25](https://github.com/ilham25)
-
 ## Installation
 
 Now, for the installation. **Follow the steps carefully**.
 
-### Clone the Repository
+### **Step 1:** Clone the Repository
 
 First, clone the repository by running the `git clone` command:
 
@@ -84,6 +83,14 @@ Now go to the new directory, it should be called `~/dotfiles`.
 $ cd ~/dotfiles
 ```
 
+### 
+
 Now you will see how to install the configuration to every program indivually.
 
 > Each program will have its own section.
+
+<hr />
+
+## Credits
+
+Thanks to [ilham25](https://github.com/ilham25) for creating oomox-aesthetic icon theme.
