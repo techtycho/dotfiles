@@ -18,6 +18,10 @@
   - [AwesomeWM](#Installation#AwesomeWM)
 - [Wallpapers](#Wallpapers)
 
+# Installation
+
+## AwesomeWM
+
 <hr />
 
 ## Gallery
@@ -42,39 +46,3 @@ You may need some dependencies before installation for the configuration to work
 | ---- | ------- | ---- | ----------- |
 | Nitrogen | [nitrogen](https://archlinux.org/packages/extra/x86_64/nitrogen/) | Program | A Program for setting wallpapers. (You also use [feh](https://archlinux.org/packages/extra/x86_64/feh/)) |
 JetBrains Mono | [nerd-fonts-jetbrain-mono<sup>AUR</sup>](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono) | Font | The Font used for the AwesomeWM panel.
-
-ssd
-
-s
-
-s
-
-
-s
-
-s
-
-s
-s
-
-s
-
-
-
-s
-
-
-s
-
-s
-
-s
-
-s
-
-s
-
-s
-
-
-wfsd
