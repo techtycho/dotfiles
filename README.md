@@ -63,4 +63,27 @@ JetBrains Mono | [nerd-fonts-jetbrain-mono<sup>AUR</sup>](https://aur.archlinux.
 
 <br />
 
-> You may be wondering where is the icon theme, well it is included in the respository (.icons). It is called oomox-aesthetic, credits to [ilham25](https://github.com/ilham25) for creating this awesome icon theme.
+[ilham25](https://github.com/ilham25)
+
+## Installation
+
+Now, for the installation. **Follow the steps carefully**.
+
+### Clone the Repository
+
+First, clone the repository by running the `git clone` command:
+
+```bash
+$ cd ~
+$ git clone https://github.com/techtycho/dotfiles
+```
+
+Now go to the new directory, it should be called `~/dotfiles`.
+
+```bash
+$ cd ~/dotfiles
+```
+
+Now you will see how to install the configuration to every program indivually.
+
+> Each program will have its own section.
