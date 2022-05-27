@@ -39,7 +39,8 @@ You may need some dependencies before installation for the configuration to work
 ### Required Packages:
 | Name | Package | Type | Description |
 | ---- | ------- | ---- | ----------- |
-| AwesomeWM | [awesome](https://archlinux.org/packages/community/x86_64/awesome/) | Program | My _Favorite_ Tiling Window Manager
+| AwesomeWM | [awesome](https://archlinux.org/packages/community/x86_64/awesome/) | Program | My _Favorite_ Tiling Window Manager.
+| Dmenu | [dmenu](https://archlinux.org/packages/community/x86_64/dmenu/) | Program | Our Run Prompt.
 
 ### Things you might need (_Recommended_):
 | Name | Package | Type | Description |
