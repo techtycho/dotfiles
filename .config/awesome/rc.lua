@@ -187,15 +187,7 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
+    awful.util.spawn("nitrogen --restore")
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -421,8 +413,7 @@ globalkeys = gears.table.join(
 
 	-- Keyboard Layout Control
 	awful.key({ modkey }, "Shift_R", function () kbdcfg.switch() end),
-    awful.key({ modkey }, "r", function() awful.util.spawn("radio") end),
-    awful.key({ modkey }, "z", function() quake:toggle() end)
+    awful.key({ modkey }, "r", function() awful.util.spawn("radio") end)
 )
 
 clientkeys = gears.table.join(
@@ -676,15 +667,4 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- Autorun programs
-autorun = true
-autorunApps = {
-    "picom --experimental-backends",
-    "nitrogen --restore"
-}
-
-if autorun then
-    for _, app in ipairs(autorunApps) do
-		awful.util.spawn(app)
-    end
-end
--- }}}
+awful.util.spawn("picom --experimental-backends")
