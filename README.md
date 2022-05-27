@@ -15,7 +15,7 @@
   - [Required Packages](#required-packages)
   - [Things you might need](#things-you-might-need-recommended)
 - [Installation](#Installation)
-  - [AwesomeWM](#Installation#AwesomeWM)
+  - [AwesomeWM](#AwesomeWM)
 - [Wallpapers](#Wallpapers)
 
 # Installation
