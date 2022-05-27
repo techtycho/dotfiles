@@ -11,16 +11,13 @@
 ## Chapters:
 
 - [Gallery](#Gallery)
+- [Before we start](#before-we-start)
 - [Requirments](#Requirements)
   - [Required Packages](#required-packages)
   - [Things you might need](#things-you-might-need-recommended)
 - [Installation](#Installation)
   - [AwesomeWM](#AwesomeWM)
 - [Wallpapers](#Wallpapers)
-
-# Installation
-
-## AwesomeWM
 
 <hr />
 
@@ -32,9 +29,9 @@
 
 ## Before we start
 
-By installing this configuration, I expect that you have a working **Arch Linux** installation (or any derivatives) with working Audio (**Pulseaudio**).
+By installing this configuration, I expect that you have a working **Arch Linux** installation (or any derivatives) with working Audio (**Pulseaudio**) and Networking (**NetworkManager**).
 
-A Terminal Emulator, a Browser, **Xorg** and a display manager of choice.
+> A Terminal Emulator, a Browser, **Xorg** and a display manager of choice should be installed.
 
 ## Requirements
 
@@ -62,3 +59,8 @@ JetBrains Mono | [nerd-fonts-jetbrain-mono<sup>AUR</sup>](https://aur.archlinux.
 | Brave | [brave-bin<sup>AUR</sup>](https://aur.archlinux.org/packages/brave-bin) | Program | My Favorite Web Browser, an open-source Chromium-based web browser that is privacy-oriented. (Use Firefox, Vivaldi, Chromium or LibreWolf if you want.) |
 | LX Appearance | [lxappearance](https://archlinux.org/packages/community/x86_64/lxappearance/) | Program | GTK Theme Manager, Look and Feel. Use it to change the GTK Themes. (Similar to GNOME-Tweaks) |
 | Kripton GTK Theme | [kripton-theme-git<sup>AUR</sup>](https://aur.archlinux.org/packages/kripton-theme-git) | GTK Theme | Dark Githuby looking theme. Works very well with oomox-aesthetic-dark GTK Icon Theme. |
+| Neofetch | [neofetch](https://archlinux.org/packages/community/any/neofetch/) | Program | Useless but cool.
+
+<br />
+
+> You may be wondering where is the icon theme, well it is included in the respository (.icons). It is called oomox-aesthetic, credits to [ilham25](https://github.com/ilham25) for creating this awesome icon theme.
