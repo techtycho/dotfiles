@@ -122,7 +122,33 @@ Now you will see how to install the configuration to every program indivually.
 
 ### AwesomeWM
 
+First, make sure you read a little bit about AwesomeWM in the [Arch Wiki](https://wiki.archlinux.org/title/awesome). The Wiki will tell you to create a directory at `~/.config/awesome/`. Finish the Installation and Configuraton guide written by the Arch Wiki.
 
+**First**, create a **backup**; you don't want to trash all your progress. So you won't cry after installing my dotfiles and finding out that they don't look as you expected them to be. At this point, there is no returning back.
+
+Create a backup directory, it will be in `~/config/awesome_old`:
+
+```bash
+$ cd ~/.config/
+$ mv awesome awesome_old
+```
+
+If you want to return back to your old config, just do:
+
+```bash
+$ cd ~/.config/
+$ rm -r awesome/
+$ mv -r awesome_old awesome
+```
+
+Now for the real installation.
+
+```bash
+$ cd ~/dotfiles/.config/
+$ mv awesome ~/.config/
+```
+
+And that's it, you've successfully installed my configuration of AwesomeWM. Have Fun.
 
 <hr />
 
