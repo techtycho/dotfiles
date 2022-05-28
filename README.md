@@ -152,7 +152,9 @@ And that's it, you've successfully installed my configuration of AwesomeWM. Have
 
 ## Wallpapers
 
-All my wallpapers are available
+All my wallpapers are available in the `wallpapers` directory in this repository. Expecting that you installed my AwesomeWM configuration, open the program `nitrogen` by pressing `Super+P` to open `dmenu` (You have to install these two programs, go to ![Requirements](#requirements)). After you've opened `dmenu`, a bar at the top will pop up, just type `"nitrogen"` and `nitrogen` will open.
+
+After you've opened `nitrogen`, go to the bottom right, you should find a button called `Preferences`, click on it. A pop-up window will appear, there are three sections, go to the last section, which is called `Directories`. There are two buttons in this section, `Add` and `Delete`. Click `Add`, and choose the wallpapers' directory, it should be `~/dotfiles/wallpapers/`. After you've done this step, press `Ok`. A list of wallpapers should appear, click on one of them and click `Apply`.
 
 <hr />
 
