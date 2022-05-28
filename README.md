@@ -148,7 +148,11 @@ $ cd ~/dotfiles/.config/
 $ mv awesome ~/.config/
 ```
 
-And that's it, you've successfully installed my configuration of AwesomeWM. Have Fun.
+And that's it, you've successfully installed my configuration of AwesomeWM. Have Fun!
+
+## Wallpapers
+
+All my wallpapers are available
 
 <hr />
 
