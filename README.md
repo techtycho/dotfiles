@@ -22,7 +22,7 @@
 
 <hr />
 
-## Gallery
+## 🎨 Gallery
 
 ![01](gallery/01.png)
 ![02](gallery/02.png)
