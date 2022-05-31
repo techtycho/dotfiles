@@ -13,10 +13,10 @@
 - [Gallery](#-gallery)
 - [Before we start](#before-we-start)
 - [Requirments](#requirements)
-  - [Required Packages](#requirements-required-packages)
-  - [Things you might need](#requirements-things-you-might-need-recommended)
+  - [Required Packages](#required-packages)
+  - [Things you might need](#things-you-might-need-recommended)
 - [Installation](#installation)
-  - [AwesomeWM](#installation-awesomewm)
+  - [AwesomeWM](#awesomewm)
 - [Wallpapers](#wallpapers)
 - [Credits](#credits)
 
