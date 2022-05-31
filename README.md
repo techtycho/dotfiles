@@ -138,7 +138,7 @@ If you want to return back to your old config, just do:
 ```bash
 $ cd ~/.config/
 $ rm -r awesome/
-$ mv -r awesome_old awesome
+$ mv awesome_old awesome
 ```
 
 Now for the real installation.
