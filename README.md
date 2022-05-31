@@ -17,7 +17,7 @@
   - [Things you might need](#things-you-might-need-recommended)
 - [Installation](#installation)
   - [AwesomeWM](#awesomewm)
-- [Wallpapers](#wallpapers)
+- [Wallpapers](#-wallpapers)
 - [Credits](#credits)
 
 <hr />
@@ -150,7 +150,7 @@ $ mv awesome ~/.config/
 
 And that's it, you've successfully installed my configuration of AwesomeWM. Have Fun!
 
-## Wallpapers
+## 🖼 Wallpapers
 
 All my wallpapers are available in the `wallpapers` directory in this repository. Expecting that you installed my AwesomeWM configuration, open the program `nitrogen` by pressing `Super+P` to open `dmenu` (You have to install these two programs, go to [Requirements](#requirements)). After you've opened `dmenu`, a bar at the top will pop up, just type `"nitrogen"`, press `Enter`, and `nitrogen` will open.
 
