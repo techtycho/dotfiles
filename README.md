@@ -10,14 +10,14 @@
 
 ## Chapters:
 
-- [Gallery](#Gallery)
+- [Gallery](#-gallery)
 - [Before we start](#before-we-start)
-- [Requirments](#Requirements)
-  - [Required Packages](#required-packages)
-  - [Things you might need](#things-you-might-need-recommended)
-- [Installation](#Installation)
-  - [AwesomeWM](#AwesomeWM)
-- [Wallpapers](#Wallpapers)
+- [Requirments](#requirements)
+  - [Required Packages](#requirements-required-packages)
+  - [Things you might need](#requirements-things-you-might-need-recommended)
+- [Installation](#installation)
+  - [AwesomeWM](#installation-awesomewm)
+- [Wallpapers](#wallpapers)
 - [Credits](#credits)
 
 <hr />
