@@ -68,6 +68,31 @@ To completely replicate my setup, you first need to make sure you have these dep
 
 Now, for the installation. **Follow the steps carefully**.
 
+### There are two ways to install
+
+There are two ways to install: **manual installation** (Safer) and **installation script** (Faster).
+
+> NOTE: The installation script may contain some bugs, so it is not a wise option for someone who doesn't know much about Linux, don't know how to fix problems
+> and don't know what are the commands being run. I recommend reading the script and knowing exactly what it will do to your system.
+
+To install via **installation script**, install the latest release of the installation script (using GitHub).
+
+> Cloning the repository to get the script won't work, because the script already clones the repository.
+
+After you've got the script, give it execute privilages, type:
+
+```bash
+sudo chmod a+x install.sh
+```
+
+Then run it (I recommend reading it first), type:
+
+```bash
+./install.sh
+```
+
+If you want to install manually, **Follow the steps carefully**:
+
 ### **Step 1:** Clone the Repository
 
 First, clone the repository by running the `git clone` command:
