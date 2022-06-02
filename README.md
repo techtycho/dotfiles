@@ -77,8 +77,6 @@ There are two ways to install: **manual installation** (Safer) and **installatio
 
 To install via **installation script**, install the latest release of the installation script (using GitHub).
 
-> Cloning the repository to get the script won't work, because the script already clones the repository.
-
 After you've got the script, give it execute privilages, type:
 
 ```bash
