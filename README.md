@@ -54,7 +54,7 @@ To completely replicate my setup, you first need to make sure you have these dep
 | Name | Package | Type | Description |
 | ---- | ------- | ---- | ----------- |
 | Nitrogen | [nitrogen](https://archlinux.org/packages/extra/x86_64/nitrogen/) | Program | A Program for setting wallpapers. (You can also use [feh](https://archlinux.org/packages/extra/x86_64/feh/)) |
-| Hack | [nerd-fonts-hack<sup>AUR</sup>](https://aur.archlinux.org/packages/nerd-fonts-hack) | Font | The font used for the AwesomeWM panel.
+| Hack | [nerd-fonts-hack<sup>AUR</sup>](https://aur.archlinux.org/packages/nerd-fonts-hack) | Font | The font used for the AwesomeWM panel and the Terminal.
 | Gedit | [gedit](https://archlinux.org/packages/extra/x86_64/gedit/) | Program | Graphical Text Editor (I don't use it, but it happens to be in my configuration files; because this is the only _Proper_ Graphical Plain Text Editor I know. Don't install if you want.) |
 | Neovim | [neovim](https://archlinux.org/packages/community/x86_64/neovim/) | Program | My Favorite Text Editor by far. (Replace with Vim, Emacs, Nano and Gedit if you want.) |
 | Brave | [brave-bin<sup>AUR</sup>](https://aur.archlinux.org/packages/brave-bin) | Program | My Favorite Web Browser, an open-source Chromium-based web browser that is privacy-oriented. (Use Firefox, Vivaldi, Chromium or LibreWolf if you want.) |
@@ -113,6 +113,12 @@ Now delete unnecessary files:
 ```bash
 $ rm -r oomox-aesthetic-* *.tar.xz
 ```
+
+To apply the theme, open `lxappearance` and go to the Icon Theme tab, choose `oomox-aesthetic-dark` or `oomox-aesthetic-light`.
+
+> We assume that you already have some kind of graphical environment (A Desktop Environment or a standalone Window Manager). If you are not, then
+> please install one (assuming that you have Xorg and Xorg-xinit), install AwesomeWM and add it to your xinit config or just use a Display Manager. Go to 
+> the ArchWiki.
 
 ### **Step 3:** Configure Programs Indivually
 
