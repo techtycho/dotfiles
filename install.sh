@@ -117,5 +117,7 @@ then
 	mv awesome ~/.config/
 fi
 
+nitrogen --random
+
 printf "${BLUE}!!${NC} Done. Exiting.."
 exit 0
