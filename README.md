@@ -62,6 +62,8 @@ To completely replicate my setup, you first need to make sure you have these dep
 | Kripton GTK Theme | [kripton-theme-git<sup>AUR</sup>](https://aur.archlinux.org/packages/kripton-theme-git) | GTK Theme | Dark Githuby looking theme. Works very well with oomox-aesthetic-dark GTK Icon Theme. |
 | Neofetch | [neofetch](https://archlinux.org/packages/community/any/neofetch/) | Program | Useless but cool.
 
+> If you want to install the required packages automatically, then use the `pkg-install.sh` script.
+
 <br />
 
 ## Installation
