@@ -85,6 +85,15 @@ else
 	alt_dir="dotfiles"
 fi
 
+printf "${GREEN}=>${NC} Do you want to install the dependencies? y/N: "
+read pkg_install
+
+if [ $pkg_install = "y" ] || [ $pkg_install = "Y" ] || [ $pkg_install = "yes" ] || [ $pkg_install = "Yes" ]
+then
+	cd ~/$alt_dir/
+	./pkg-install.sh
+else
+
 printf "${GREEN}=>${NC} Do you want to extract the icon themes? Y/n: "
 read icons_install
 
