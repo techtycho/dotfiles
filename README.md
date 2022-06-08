@@ -77,7 +77,16 @@ There are two ways to install: **manual installation** (Safer) and **installatio
 > NOTE: The installation script may contain some bugs, so it is not a wise option for someone who doesn't know much about Linux, don't know how to fix problems
 > and don't know what are the commands being run. I recommend reading the script and knowing exactly what it will do to your system.
 
-To install via **installation script**, install the latest release of the installation script (using GitHub).
+To install via **installation script**, clone the repository or install the latest release of the installation script (using GitHub).
+
+If you want to get the script by cloning the repository, type:
+
+```bash
+$ cd ~
+$ git clone https://github.com/techtycho/dotfiles
+```
+
+And before running the Installation Script, you first need to have the dependencies installed, you could install manually, or use the `pkg-install.sh` script. The steps are shown below.
 
 After you've got the script, give it execute privilages, type:
 
@@ -90,6 +99,11 @@ Then run it (I recommend reading it first), type:
 ```bash
 ./install.sh
 ```
+
+> The script has an option that installs all the dependencies, so you may not need the pkg-install.sh script.
+> You can also modify the script to install the programs you want.
+
+If you still want to run the `pkg-install.sh` script, do the same steps but with all `install.sh` occurrences replaced with `pkg-install.sh`.
 
 If you want to install manually, **Follow the steps carefully**:
 
