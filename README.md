@@ -91,17 +91,17 @@ And before running the Installation Script, you first need to have the dependenc
 After you've got the script, give it execute privilages, type:
 
 ```bash
-sudo chmod a+x install.sh
+$ sudo chmod a+x install.sh
 ```
 
 Then run it (I recommend reading it first), type:
 
 ```bash
-./install.sh
+$ ./install.sh
 ```
 
 > The script has an option that installs all the dependencies, so you may not need the pkg-install.sh script.
-> You can also modify the script to install the programs you want.
+> You can also modify the script to install only the programs you want.
 
 If you still want to run the `pkg-install.sh` script, do the same steps but with all `install.sh` occurrences replaced with `pkg-install.sh`.
 
