@@ -77,9 +77,7 @@ There are two ways to install: **manual installation** (Safer) and **installatio
 > NOTE: The installation script may contain some bugs, so it is not a wise option for someone who doesn't know much about Linux, don't know how to fix problems
 > and don't know what are the commands being run. I recommend reading the script and knowing exactly what it will do to your system.
 
-To install via **installation script**, clone the repository or install the latest release of the installation script (using GitHub).
-
-If you want to get the script by cloning the repository, type:
+To install via **installation script**, clone the repository by typing:
 
 ```bash
 $ cd ~
