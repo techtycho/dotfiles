@@ -38,7 +38,6 @@ clone_repo () {
 
 	  case $action_if_dir_exists in
 		1)
-			alt="true"
 		  printf "${GREEN}=>${NC} Choose a name for the new directory: "
 		  read alt_dir
 		  git clone https://github.com/techtycho/dotfiles $alt_dir
@@ -70,6 +69,9 @@ clone_repo () {
 	else
 	  git clone https://github.com/techtycho/dotfiles
 	  cd ~/dotfiles
+
+		printf "${BLUE}=>${NC} What is the name of the cloned directory. (Name, not path): "
+		read alt_dir
 	fi
 }
 
@@ -79,6 +81,8 @@ read cloned_yes_or_no
 if [ $cloned_yes_or_no = "y" ] || [ $cloned_yes_or_no = "Y" ] || [ $cloned_yes_or_no = "yes" ] || [ $cloned_yes_or_no = "Yes" ]
 then
 	clone_repo
+else
+	alt_dir="dotfiles"
 fi
 
 printf "${GREEN}=>${NC} Do you want to extract the icon themes? Y/n: "
@@ -86,12 +90,7 @@ read icons_install
 
 if [ $icons_install = "y" ] || [ $icons_install = "Y" ] || [ $icons_install = "yes" ] || [ $icons_install = "Yes" ]
 then
-	if [ $alt = "true" ];
-	then
-		cd ~/$alt_dir
-	else
-		cd ~/dotfiles
-	fi
+	cd ~/$alt_dir
 
 	cd .icons/
 	tar -Jxvf oomox-aesthetic-dark.tar.xz # Dark
@@ -117,7 +116,7 @@ then
 	mv awesome ~/.config/
 fi
 
-nitrogen --random
+nitrogen ~/$alt_dir/wallpapers/
 
 printf "${BLUE}!!${NC} Done. Exiting.."
 exit 0
