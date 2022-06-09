@@ -24,7 +24,7 @@ theme.fg_focus      = "#EDE9F2"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = 3 
+theme.useless_gap   = 3
 theme.border_width  = dpi(1)
 theme.border_normal = "#000000"
 theme.border_focus  = "#4a4e69"
@@ -58,7 +58,7 @@ theme.layout_centerworkh = theme.lain_icons .. "centerworkh.png" -- centerwork.h
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
+local taglist_square_size = dpi(6)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
     taglist_square_size, theme.fg_normal
 )
