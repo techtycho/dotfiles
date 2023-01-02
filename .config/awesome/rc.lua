@@ -22,9 +22,12 @@ require("awful.autofocus")
 require("error")
 
 -- Variables
-_G.config_dir = "~/.config/awesome/"
+local filesystem = require("util.filesystem")
+
+_G.config_dir = filesystem.dir
 _G.subdirs = {
   themes = _G.config_dir .. "themes/",
+  assets = _G.config_dir .. "assets/",
 }
 
 _G.theme = "default"
@@ -36,36 +39,18 @@ editor = apps.editor
 editor_cmd = apps.editor_term_cmd
 
 modkey = require("bindings.util").modkey
--- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-  { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-  { "manual", terminal .. " -e man awesome" },
-  { "edit config", editor_cmd .. " " .. awesome.conffile },
-  { "restart", awesome.restart },
-  { "quit", function() awesome.quit() end },
-}
-
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-  { "open terminal", terminal }
-}
-})
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-  menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
+-- Modules
+local menu = require("modules.menu")
+mymainmenu = menu.menu
+mylauncher = menu.launcher
 
 -- {{{ Tag layout
 -- Table of layouts to cover with awful.layout.inc, order matters.
 tag.connect_signal("request::default_layouts", function()
   awful.layout.append_default_layouts({
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
+    awful.layout.suit.floating,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
@@ -190,6 +175,16 @@ end)
 
 -- }}}
 
+-- Keyboard Layout Managment
+kbdcfg = {}
+kbdcfg.cmd = "setxkbmap"
+kbdcfg.layout = { "us", "ar" }
+kbdcfg.current = 1 -- us is default
+kbdcfg.switch = function()
+  kbdcfg.current = kbdcfg.current % #(kbdcfg.layout) + 1
+  os.execute(kbdcfg.cmd .. " " .. kbdcfg.layout[kbdcfg.current])
+end
+
 -- {{{ Mouse bindings
 awful.mouse.append_global_mousebindings({
   awful.button({}, 3, function() mymainmenu:toggle() end),
@@ -226,6 +221,15 @@ awful.keyboard.append_global_keybindings({
     { description = "run prompt", group = "launcher" }),
   awful.key({ modkey }, "p", function() menubar.show() end,
     { description = "show the menubar", group = "launcher" }),
+
+  -- Audio Control
+  awful.key({}, "XF86AudioRaiseVolume", function() awful.util.spawn("amixer set Master 2%+") end),
+  awful.key({}, "XF86AudioLowerVolume", function() awful.util.spawn("amixer set Master 2%-") end),
+  awful.key({}, "XF86AudioMute", function() awful.util.spawn("amixer set Master toggle") end),
+  awful.key({}, "XF86AudioMute", function() awful.util.spawn("amixer set Speaker unmute") end),
+
+  -- Keyboard Layout Control
+  awful.key({ modkey }, "Shift_R", function() kbdcfg.switch() end),
 })
 
 -- Tags related keybindings
