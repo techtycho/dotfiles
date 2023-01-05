@@ -4,10 +4,13 @@ M.dmenu = function(conf)
   local cmd = " "
   local cmd_name = "dmenu_run"
   local flags = {
-    font   = { "-fn", true },
-    prompt = { "-p", true },
-    accent = { "-sb", true },
-    height = { "-h", false },
+    font      = { "-fn", true },
+    prompt    = { "-p", true },
+    focus_bg  = { "-sb", true },
+    focus_fg  = { "-sf", true },
+    normal_bg = { "-nb", true },
+    normal_fg = { "-nf", true },
+    height    = { "-h", false },
   }
 
   for k, v in pairs(conf) do

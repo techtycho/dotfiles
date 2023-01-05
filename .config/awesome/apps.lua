@@ -7,10 +7,12 @@ local M = {}
 M.terminal = "alacritty"
 M.files    = "thunar"
 M.launcher = config.dmenu {
-  prompt = "Run",
-  accent = "#4a4e69",
-  font   = "JetBrainsMono Nerd Font-9",
-  height = 24,
+  prompt    = "Run:",
+  focus_bg  = "#5cb6c2",
+  focus_fg  = "#000",
+  normal_bg = "#282c34",
+  font      = "JetBrainsMono Nerd Font-9",
+  height    = 25,
 }
 
 -- Editor

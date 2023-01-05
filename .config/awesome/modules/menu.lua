@@ -1,12 +1,11 @@
-local awful     = require("awful")
-local beautiful = require("beautiful")
-local menubar   = require("menubar")
-local apps      = require("apps")
-local asset     = require("util.filesystem").asset
+local awful   = require("awful")
+local menubar = require("menubar")
+local apps    = require("apps")
+local asset   = require("util.filesystem").asset
 
 local M = {}
 
--- Temporary
+-- Menu items (temporary)
 M.menu = awful.menu({
   items = {
     { "Awesome",
@@ -18,9 +17,9 @@ M.menu = awful.menu({
           end
         },
       },
-      asset("arch.png")
+      asset("arch.png"),
     },
-    { "Terminal", apps.terminal, asset("terminal.svg") },
+    { "Terminal", apps.terminal, asset("apps/alacritty.png") },
     { "Applications",
       {
         { "Browser", apps.browser, asset("apps/brave.png") },
@@ -31,11 +30,6 @@ M.menu = awful.menu({
       },
     }
   },
-})
-
-M.launcher = awful.widget.launcher({
-  image = beautiful.awesome_icon,
-  menu = M.menu,
 })
 
 menubar.utils.terminal = apps.terminal
