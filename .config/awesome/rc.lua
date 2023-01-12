@@ -12,7 +12,6 @@ local naughty   = require("naughty")
 local ruled     = require("ruled")
 
 -- Other libraries
-local menubar       = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 require("awful.hotkeys_popup.keys")
@@ -34,10 +33,8 @@ _G.theme = "default"
 beautiful.init(_G.subdirs.themes .. _G.theme .. "/theme.lua");
 
 -- ## MODULES ## --
-local menu     = require("modules.menu")
-local apps     = require("apps")
-local language = require("modules.language")
-local volume   = require("modules.volume")
+local apps = require("apps")
+local menu = require("modules.menu")
 
 require("modules.layout")
 require("modules.wallpaper")
@@ -48,49 +45,9 @@ mymainmenu = menu.menu
 terminal = apps.terminal
 modkey = require("bindings").modkey
 
--- {{{ Mouse bindings
-awful.mouse.append_global_mousebindings({
-  awful.button({}, 3, function() mymainmenu:toggle() end),
-  awful.button({}, 4, awful.tag.viewprev),
-  awful.button({}, 5, awful.tag.viewnext),
-})
--- }}}
-
--- {{{ Key bindings
-
--- General Awesome keys
-awful.keyboard.append_global_keybindings({
-  awful.key({ modkey, }, "s", hotkeys_popup.show_help,
-    { description = "show help", group = "awesome" }),
-  awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-    { description = "show main menu", group = "awesome" }),
-  awful.key({ modkey, "Control" }, "r", awesome.restart,
-    { description = "reload awesome", group = "awesome" }),
-  awful.key({ modkey, "Shift" }, "q", awesome.quit,
-    { description = "quit awesome", group = "awesome" }),
-  awful.key({ modkey }, "x",
-    function()
-      awful.prompt.run {
-        prompt       = "Run Lua code: ",
-        textbox      = awful.screen.focused().mypromptbox.widget,
-        exe_callback = awful.util.eval,
-        history_path = awful.util.get_cache_dir() .. "/history_eval"
-      }
-    end,
-    { description = "lua execute prompt", group = "awesome" }),
-  awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
-    { description = "open a terminal", group = "launcher" }),
-  awful.key({ modkey }, "p", function() awful.spawn(apps.launcher) end,
-    { description = "show the menubar", group = "launcher" }),
-
-  -- Audio Control
-  awful.key({}, "XF86AudioRaiseVolume", volume.inc),
-  awful.key({}, "XF86AudioLowerVolume", volume.dec),
-  awful.key({}, "XF86AudioMute", volume.toggle),
-
-  -- Keyboard Layout Control
-  awful.key({ modkey }, "Shift_R", function() language.switch() end),
-})
+-- Bindings
+require("bindings.mouse")
+require("bindings.key")
 
 -- Tags related keybindings
 awful.keyboard.append_global_keybindings({
@@ -352,43 +309,43 @@ end)
 
 -- {{{ Titlebars
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
-client.connect_signal("request::titlebars", function(c)
-  -- buttons for the titlebar
-  local buttons = {
-    awful.button({}, 1, function()
-      c:activate { context = "titlebar", action = "mouse_move" }
-    end),
-    awful.button({}, 3, function()
-      c:activate { context = "titlebar", action = "mouse_resize" }
-    end),
-  }
+-- client.connect_signal("request::titlebars", function(c)
+--   -- buttons for the titlebar
+--   local buttons = {
+--     awful.button({}, 1, function()
+--       c:activate { context = "titlebar", action = "mouse_move" }
+--     end),
+--     awful.button({}, 3, function()
+--       c:activate { context = "titlebar", action = "mouse_resize" }
+--     end),
+--   }
 
-  awful.titlebar(c).widget = {
-    { -- Left
-      awful.titlebar.widget.iconwidget(c),
-      buttons = buttons,
-      layout  = wibox.layout.fixed.horizontal
-    },
-    { -- Middle
-      { -- Title
-        halign = "center",
-        widget = awful.titlebar.widget.titlewidget(c)
-      },
-      buttons = buttons,
-      layout  = wibox.layout.flex.horizontal
-    },
-    { -- Right
-      awful.titlebar.widget.floatingbutton(c),
-      awful.titlebar.widget.maximizedbutton(c),
-      awful.titlebar.widget.stickybutton(c),
-      awful.titlebar.widget.ontopbutton(c),
-      awful.titlebar.widget.closebutton(c),
-      layout = wibox.layout.fixed.horizontal()
-    },
-    layout = wibox.layout.align.horizontal
-  }
-end)
--- }}}
+--   awful.titlebar(c).widget = {
+--     { -- Left
+--       awful.titlebar.widget.iconwidget(c),
+--       buttons = buttons,
+--       layout  = wibox.layout.fixed.horizontal
+--     },
+--     { -- Middle
+--       { -- Title
+--         halign = "center",
+--         widget = awful.titlebar.widget.titlewidget(c)
+--       },
+--       buttons = buttons,
+--       layout  = wibox.layout.flex.horizontal
+--     },
+--     { -- Right
+--       awful.titlebar.widget.floatingbutton(c),
+--       awful.titlebar.widget.maximizedbutton(c),
+--       awful.titlebar.widget.stickybutton(c),
+--       awful.titlebar.widget.ontopbutton(c),
+--       awful.titlebar.widget.closebutton(c),
+--       layout = wibox.layout.fixed.horizontal()
+--     },
+--     layout = wibox.layout.align.horizontal
+--   }
+-- end)
+-- -- }}}
 
 -- {{{ Notifications
 
@@ -413,3 +370,5 @@ end)
 client.connect_signal("mouse::enter", function(c)
   c:activate { context = "mouse_enter", raise = false }
 end)
+
+require("autostart")
