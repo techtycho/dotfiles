@@ -1,35 +1,58 @@
 local awful    = require("awful")
-local menu     = require("modules.menu")
 local apps     = require("apps")
 local language = require("modules.language")
 local volume   = require("modules.volume")
 
-local modkey = require("bindings").modkey
+local bind = require("bindings")
+local modkey = bind.modkey
 
-awful.keyboard.append_global_keybindings({
-  awful.key({ modkey, }, "w",
+-- AwesomeWM Process
+bind.keygroup(bind.mode.global_, "awesomewm", {
+  -- Quit AwesomeWM | Super + Shift + q
+  awful.key({ modkey, "Shift" }, "q",
+    awesome.quit,
+    { description = "Quit AwesomeWM" }),
+
+  -- Reload AwesomeWM | Super + Ctrl + r
+  awful.key({ modkey, "Control" }, "r",
+    awesome.restart,
+    { description = "Reload AwesomeWM" }),
+})
+
+-- Essential Applications and Launchers
+bind.keygroup(bind.mode.global_, "launcher", {
+  -- Open a Terminal | Super + Return
+  awful.key({ modkey, }, "Return",
     function()
-      menu.menu:show()
+      awful.spawn(terminal)
     end,
-    { description = "Show main menu", group = "awesome" }),
+    { description = "Open a terminal" }),
 
-  awful.key({ modkey, "Control" }, "r", awesome.restart,
-    { description = "Reload AwesomeWM", group = "awesome" }),
+  -- Open App Launcher (dmenu) | Super + p
+  awful.key({ modkey }, "p",
+    function()
+      awful.spawn(apps.launcher)
+    end,
+    { description = "Display the launcher" }),
+})
 
-  awful.key({ modkey, "Shift" }, "q", awesome.quit,
-    { description = "Quit AwesomeWM", group = "awesome" }),
-
-  awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
-    { description = "Open a terminal", group = "launcher" }),
-
-  awful.key({ modkey }, "p", function() awful.spawn(apps.launcher) end,
-    { description = "Show the menubar", group = "launcher" }),
+-- Control Keybindings (eg. volume & language)
+bind.keygroup(bind.mode.global_, "control", {
+  -- Switch Language | Super + Right Shift
+  awful.key({ modkey }, "Shift_R",
+    function()
+      language.switch()
+    end,
+    { description = "Switch language" }),
 
   -- Audio Control
-  awful.key({}, "XF86AudioRaiseVolume", volume.inc),
-  awful.key({}, "XF86AudioLowerVolume", volume.dec),
-  awful.key({}, "XF86AudioMute", volume.toggle),
+  awful.key({}, "XF86AudioRaiseVolume", volume.inc,
+    { description = "Raise volume" }),
+  awful.key({}, "XF86AudioLowerVolume", volume.dec,
+    { description = "Lower volume" }),
+  awful.key({}, "XF86AudioMute", volume.toggle,
+    { description = "Mute/Unmute volume" }),
+})
 
-  -- Keyboard Layout Control
-  awful.key({ modkey }, "Shift_R", function() language.switch() end),
+awful.keyboard.append_global_keybindings({
 })

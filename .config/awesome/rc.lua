@@ -34,14 +34,12 @@ beautiful.init(_G.subdirs.themes .. _G.theme .. "/theme.lua");
 
 -- ## MODULES ## --
 local apps = require("apps")
-local menu = require("modules.menu")
 
 require("modules.layout")
 require("modules.wallpaper")
 require("widgets")
 
 -- Temporary
-mymainmenu = menu.menu
 terminal = apps.terminal
 modkey = require("bindings").modkey
 
