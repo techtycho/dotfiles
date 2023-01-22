@@ -1,5 +1,8 @@
 local awful = require("awful")
 
+local bind = require("bindings")
+local modkey = bind.modkey
+
 local M = {
   awful.button({}, 1, function(t) t:view_only() end),
 

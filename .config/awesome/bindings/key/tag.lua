@@ -57,11 +57,9 @@ bind.keygroup(bind.mode.global_, "tag", {
     on_press    = function(index)
       if client.focus then
         local tag = client.focus.screen.tags[index]
-        local c = client.focus
 
         if tag then
-          c:move_to_tag(tag)
-          c.urgent = true -- Make the moved client urgent
+          client.focus:move_to_tag(tag)
         end
       end
     end,

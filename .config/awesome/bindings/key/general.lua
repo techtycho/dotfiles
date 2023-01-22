@@ -24,7 +24,7 @@ bind.keygroup(bind.mode.global_, "launcher", {
   -- Open a Terminal | Super + Return
   awful.key({ modkey, }, "Return",
     function()
-      awful.spawn(terminal)
+      awful.spawn(apps.terminal)
     end,
     { description = "Open a Terminal" }),
 
