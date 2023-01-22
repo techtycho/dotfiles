@@ -26,14 +26,14 @@ bind.keygroup(bind.mode.global_, "launcher", {
     function()
       awful.spawn(terminal)
     end,
-    { description = "Open a terminal" }),
+    { description = "Open a Terminal" }),
 
   -- Open App Launcher (dmenu) | Super + p
   awful.key({ modkey }, "p",
     function()
       awful.spawn(apps.launcher)
     end,
-    { description = "Display the launcher" }),
+    { description = "Open App Launcher" }),
 })
 
 -- Control Keybindings (eg. volume & language)
@@ -52,7 +52,4 @@ bind.keygroup(bind.mode.global_, "control", {
     { description = "Lower volume" }),
   awful.key({}, "XF86AudioMute", volume.toggle,
     { description = "Mute/Unmute volume" }),
-})
-
-awful.keyboard.append_global_keybindings({
 })

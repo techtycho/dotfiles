@@ -17,15 +17,16 @@ theme.taglist_font = "JetBrainsMono Nerd Font 9"
 
 theme.bg_normal   = "#282c34"
 theme.bg_focus    = "#535d6c"
-theme.bg_urgent   = "#ff0000"
 theme.bg_minimize = "#444444"
 theme.bg_systray  = "#383c44"
 
 theme.taglist_bg_focus    = "#ffffff20"
 theme.taglist_bg_occupied = "#ffffff0a"
+theme.taglist_bg_urgent   = "#ff55552f"
 theme.taglist_fg          = "#ddd"
 theme.taglist_fg_focus    = "#eee"
 theme.taglist_fg_occupied = "#dadada"
+theme.taglist_fg_urgent   = "#ffdada"
 
 theme.fg_normal            = "#aaaaaa"
 theme.fg_focus             = "#ffffff"

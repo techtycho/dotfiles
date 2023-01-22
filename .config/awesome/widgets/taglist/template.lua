@@ -1,6 +1,8 @@
 local awful = require("awful")
 local wibox = require("wibox")
 
+local signal = false
+
 local M = {
   {
     {
@@ -24,10 +26,6 @@ local M = {
     local t = awful.screen.focused().selected_tag
     local tags = awful.screen.focused().tags
 
-    if #tags[i]:clients() > 0 then
-      self:get_children_by_id("underline")[1].color = "#888"
-    end
-
     if t.index == i then
       self:get_children_by_id("underline")[1].color = "#61afef"
     elseif #tags[i]:clients() <= 0 then
@@ -47,6 +45,12 @@ local M = {
       self:get_children_by_id("underline")[1].color = "#61afef"
     elseif #tags[i]:clients() <= 0 then
       self:get_children_by_id("underline")[1].color = "#282c34"
+    end
+
+    for _, v in ipairs(tags[i]:clients()) do
+      if v.urgent then
+        self:get_children_by_id("underline")[1].color = "#f00"
+      end
     end
   end
 }
