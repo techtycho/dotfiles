@@ -4,7 +4,7 @@ local bind = require("bindings")
 local modkey = bind.modkey
 
 client.connect_signal("request::default_keybindings", function()
-  bind.keygroup(bind.mode.client_, "client", {
+  bind.keygroup(bind.mode.client, "client", {
     -- Toggle Fullscreen | Super + f
     awful.key({ modkey }, "f",
       function(c)

@@ -4,7 +4,7 @@ local bind = require("bindings")
 local modkey = bind.modkey
 
 -- Tag-related Keybindings
-bind.keygroup(bind.mode.global_, "tag", {
+bind.keygroup(bind.mode.global, "tag", {
   -- View Previous Tag | Super + Left Arrow
   awful.key({ modkey, }, "Left", awful.tag.viewprev,
     { description = "View Previous Tag" }),
@@ -18,7 +18,7 @@ bind.keygroup(bind.mode.global_, "tag", {
     { description = "Go back to last tag" }),
 })
 
-bind.keygroup(bind.mode.global_, "tag", {
+bind.keygroup(bind.mode.global, "tag", {
   -- View Tag | Super + Tag
   awful.key {
     modifiers   = { modkey },

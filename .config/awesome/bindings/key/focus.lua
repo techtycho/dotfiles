@@ -3,7 +3,7 @@ local awful = require("awful")
 local bind = require("bindings")
 local modkey = bind.modkey
 
-bind.keygroup(bind.mode.global_, "client", {
+bind.keygroup(bind.mode.global, "client", {
   -- Focus Next By Index | Super + j
   awful.key({ modkey, }, "j",
     function()
@@ -43,7 +43,7 @@ bind.keygroup(bind.mode.global_, "client", {
 })
 
 -- Screen-related Keybindings
-bind.keygroup(bind.mode.global_, "screen", {
+bind.keygroup(bind.mode.global, "screen", {
   -- Focus Next Screen | Super + Ctrl + j
   awful.key({ modkey, "Control" }, "j", function() awful.screen.focus_relative(1) end,
     { description = "Focus the next screen" }),

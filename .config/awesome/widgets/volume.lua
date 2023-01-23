@@ -1,8 +1,6 @@
-local awful   = require("awful")
-local wibox   = require("wibox")
-local naughty = require("naughty")
+local awful = require("awful")
+local wibox = require("wibox")
 
-local shell  = require("util.shell")
 local volume = require("modules.volume")
 
 local M = {}
@@ -41,11 +39,11 @@ M.widget = wibox.widget {
 }
 
 M.update = function()
-  awful.spawn.easy_async(shell.bash(M.cmd), function(stdout)
+  awful.spawn.easy_async_with_shell(M.cmd, function(stdout)
     M.widget:get_children_by_id("volume")[1]:set_text(stdout)
   end)
 
-  awful.spawn.easy_async(shell.bash(M.cmd_mute), function(stdout)
+  awful.spawn.easy_async_with_shell(M.cmd_mute, function(stdout)
     -- I'm not good at sed and regex, if you have any idea why the command produces
     -- a newline after the word 'off' or 'on', tell me via issues or PR.
     if stdout == "off\n" then

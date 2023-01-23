@@ -1,13 +1,14 @@
 local M = {}
 
+-- Configuration for Dmenu
 M.dmenu = function(conf)
   local cmd = " "
   local cmd_name = "dmenu_run"
   local flags = {
     font      = { "-fn", true },
     prompt    = { "-p", true },
-    focus_bg  = { "-sb", true },
-    focus_fg  = { "-sf", true },
+    accent_bg = { "-sb", true },
+    accent_fg = { "-sf", true },
     normal_bg = { "-nb", true },
     normal_fg = { "-nf", true },
     height    = { "-h", false },

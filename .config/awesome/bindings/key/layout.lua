@@ -3,7 +3,7 @@ local awful = require("awful")
 local bind = require("bindings")
 local modkey = bind.modkey
 
-bind.keygroup(bind.mode.global_, "layout", {
+bind.keygroup(bind.mode.global, "layout", {
   -- Increase Master Width Factor | Super + l
   awful.key({ modkey }, "l",
     function()
@@ -62,7 +62,7 @@ bind.keygroup(bind.mode.global_, "layout", {
     { description = "Select previous" }),
 })
 
-bind.keygroup(bind.mode.global_, "client", {
+bind.keygroup(bind.mode.global, "client", {
   -- Swap With Next Client (by index) | Super + Shift + j
   awful.key({ modkey, "Shift" }, "j",
     function()

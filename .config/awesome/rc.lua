@@ -1,13 +1,11 @@
 -- awesome_mode: api-level=4:screen=on
 
--- Make sure that installed LuaRocks packages are found
 pcall(require, "luarocks.loader")
 
 -- Standard AwesomeWM libraries
 local beautiful = require("beautiful")
 local ruled     = require("ruled")
 
-require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
 
 -- Error Handling
@@ -28,17 +26,19 @@ beautiful.init(_G.subdirs.themes .. _G.theme .. "/theme.lua");
 -- ## MODULES ## --
 require("modules.layout")
 require("modules.wallpaper")
+require("modules.notifications")
+require("modules.misc")
+-- Widgets
 require("widgets")
 
--- Bindings
+-- ## BINDINGS ##
 require("bindings.mouse")
 require("bindings.key")
 
--- Rules
+-- ## RULES ##
 ruled.client.connect_signal("request::rules", function()
   require("rules")
 end)
 
-require("modules.notifications")
-require("modules.misc")
+-- ## AUTOSTART ##
 require("autostart")

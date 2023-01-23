@@ -7,7 +7,7 @@ local bind = require("bindings")
 local modkey = bind.modkey
 
 -- AwesomeWM Process
-bind.keygroup(bind.mode.global_, "awesomewm", {
+bind.keygroup(bind.mode.global, "awesomewm", {
   -- Quit AwesomeWM | Super + Shift + q
   awful.key({ modkey, "Shift" }, "q",
     awesome.quit,
@@ -20,7 +20,7 @@ bind.keygroup(bind.mode.global_, "awesomewm", {
 })
 
 -- Essential Applications and Launchers
-bind.keygroup(bind.mode.global_, "launcher", {
+bind.keygroup(bind.mode.global, "launcher", {
   -- Open a Terminal | Super + Return
   awful.key({ modkey, }, "Return",
     function()
@@ -37,7 +37,7 @@ bind.keygroup(bind.mode.global_, "launcher", {
 })
 
 -- Control Keybindings (eg. volume & language)
-bind.keygroup(bind.mode.global_, "control", {
+bind.keygroup(bind.mode.global, "control", {
   -- Switch Language | Super + Right Shift
   awful.key({ modkey }, "Shift_R",
     function()
