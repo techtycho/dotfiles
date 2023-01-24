@@ -12,7 +12,6 @@ ruled.notification.connect_signal("request::rules", function()
   }
 end)
 
--- TODO Customize notifications
 naughty.connect_signal("request::display", function(n)
   naughty.layout.box { notification = n }
 end)

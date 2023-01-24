@@ -4,23 +4,20 @@ local M = {}
 
 M.cmd      = "setxkbmap"
 M.layout   = { "us", "ar" }
-M.layout_f = { "EN", "AR" } -- User friendly names
+M.layout_p = { "EN", "AR" } -- Prettier names
+M.layout_f = { "English", "Arabic" } -- Full names
 M.current  = 1
 M.signals  = gears.object() -- Object for emitting signals
 
 M.get = function()
-  return M.layout_f[M.current]
-end
-
-M.emit_signals = function()
-  M.signals:emit_signal("language::switch", M.current) -- On update
+  return M.current
 end
 
 M.switch = function()
   M.current = M.current % #(M.layout) + 1
   os.execute(M.cmd .. " " .. M.layout[M.current])
   -- Signals
-  M.emit_signals()
+  M.signals:emit_signal("language::switch", M.current)
 end
 
 return M

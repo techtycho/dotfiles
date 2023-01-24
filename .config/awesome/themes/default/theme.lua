@@ -20,6 +20,8 @@ theme.bg_focus    = "#535d6c"
 theme.bg_minimize = "#444444"
 theme.bg_systray  = "#383c44"
 
+theme.hover_bg = "#fff1"
+
 theme.taglist_bg_focus    = "#ffffff20"
 theme.taglist_bg_occupied = "#ffffff0a"
 theme.taglist_bg_urgent   = "#ff55552f"
@@ -39,6 +41,14 @@ theme.border_width        = dpi(1)
 theme.border_color_normal = "#282c34"
 theme.border_color_active = "#56b6c2"
 theme.border_color_marked = "#91231c"
+
+-- ## BAR ##
+theme.bar_height = 25
+theme.widget_margin = 6
+theme.underline_thickness = 2
+
+-- ## WIDGETS ##
+theme.widget_language_color = "#e5c07b"
 
 -- There are other variable sets
 -- overriding the default one when

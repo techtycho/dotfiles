@@ -1,5 +1,6 @@
-local awful = require("awful")
-local wibox = require("wibox")
+local awful     = require("awful")
+local wibox     = require("wibox")
+local beautiful = require("beautiful")
 
 local volume   = require("widgets.volume").widget
 local battery  = require("widgets.battery").widget
@@ -17,7 +18,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
   -- Create the wibox
   s.mywibox = awful.wibar {
     position = "top",
-    height   = 25,
+    height   = beautiful.bar_height or 25,
     screen   = s,
     widget   = {
       layout = wibox.layout.align.horizontal,
