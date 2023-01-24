@@ -1,7 +1,6 @@
 local awful     = require("awful")
 local wibox     = require("wibox")
 local beautiful = require("beautiful")
-local naughty   = require("naughty")
 
 local language = require("modules.language")
 
@@ -37,7 +36,7 @@ M.widget = wibox.widget {
     left   = beautiful.widget_margin or 6,
     widget = wibox.container.margin,
   },
-  widget = wibox.container.background, -- This exists for the hover effects
+  widget = wibox.container.background, -- This exists for the hover effect
 }
 
 -- ## EFFECTS ##
@@ -62,18 +61,14 @@ M.update = function()
   M.tooltip:set_text(language.layout_f[language.get()])
 end
 
-M.switch = function()
-  language.switch()
-  M.update()
-end
-
 language.signals:connect_signal("language::switch", function()
   M.update()
 end)
 
 M.widget.buttons = {
   awful.button({}, 1, function()
-    M.switch()
+    language.switch()
+    M.update()
   end)
 }
 
