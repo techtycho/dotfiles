@@ -2,10 +2,6 @@ local awful     = require("awful")
 local wibox     = require("wibox")
 local beautiful = require("beautiful")
 
--- DPI
-local xresources = require("beautiful.xresources")
-local dpi = xresources.apply_dpi
-
 local fade = require("animations.fade")
 
 local M = wibox {
@@ -14,8 +10,8 @@ local M = wibox {
   bg      = beautiful.tagswitch_bg or beautiful.bg_normal or "#000",
   fg      = beautiful.tagswitch_fg or beautiful.fg_normal or "#fff",
   ontop   = true,
-  height  = beautiful.tagswitch_height or dpi(90),
-  width   = beautiful.tagswitch_width or dpi(180),
+  height  = beautiful.tagswitch_height or 90,
+  width   = beautiful.tagswitch_width or 180,
 }
 
 M:setup {

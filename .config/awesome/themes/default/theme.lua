@@ -24,7 +24,7 @@ theme.hover_bg = "#fff1"
 
 theme.taglist_bg_focus    = "#ffffff20"
 theme.taglist_bg_occupied = "#ffffff0a"
-theme.taglist_bg_urgent   = "#ff55552f"
+theme.taglist_bg_urgent   = "#e06c752f"
 theme.taglist_fg          = "#ddd"
 theme.taglist_fg_focus    = "#eee"
 theme.taglist_fg_occupied = "#dadada"
@@ -68,13 +68,20 @@ theme.widget_client_separator_color     = "#888c94"
 theme.widget_client_font                = "Liberation Sans 9"
 theme.widget_client_separator_thickness = 1
 
+-- ## TAGLIST ##
+theme.taglist_width                  = 9
+theme.taglist_underline_thickness    = 3
+theme.taglist_underline_color_normal = "#888"
+theme.taglist_underline_color_focus  = "#61afef"
+theme.taglist_underline_color_urgent = "#e06c75"
+
 -- ## EFFECTS ## --
 -- Tagswitch
 theme.tagswitch_bg     = "#000"
 theme.tagswitch_fg     = "#fff"
 theme.tagswitch_font   = "JetBrainsMono Nerd Font 37"
-theme.tagswitch_height = dpi(100)
-theme.tagswitch_width  = dpi(110)
+theme.tagswitch_height = 100
+theme.tagswitch_width  = 110
 theme.tagswitch_speed  = 200
 theme.tagswitch_delay  = 0.25
 

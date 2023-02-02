@@ -18,7 +18,7 @@ M.widget = wibox.widget {
             text = beautiful.widget_battery_icon or "",
             widget = wibox.widget.textbox,
           },
-          awful.widget.watch(shell.bash("battery"), M.interval),
+          awful.widget.watch(shell.bash("./scripts/battery.sh"), M.interval),
           {
             text = "%",
             widget = wibox.widget.textbox,
