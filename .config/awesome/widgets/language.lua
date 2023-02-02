@@ -13,7 +13,7 @@ M.widget = wibox.widget {
       {
         {
           {
-            text   = "韛 ",
+            text   = beautiful.widget_language_icon or "",
             widget = wibox.widget.textbox
           },
           {
@@ -32,8 +32,8 @@ M.widget = wibox.widget {
       color  = beautiful.widget_language_color or beautiful.fg_normal or "#fff",
       widget = wibox.container.margin,
     },
-    right  = beautiful.widget_margin or 6,
-    left   = beautiful.widget_margin or 6,
+    right  = beautiful.widget_spacing or 6,
+    left   = beautiful.widget_spacing or 6,
     widget = wibox.container.margin,
   },
   widget = wibox.container.background, -- This exists for the hover effect

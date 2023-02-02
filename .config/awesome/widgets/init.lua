@@ -12,8 +12,9 @@ local systray  = require("widgets.systray").widget
 screen.connect_signal("request::desktop_decoration", function(s)
   s.mypromptbox = awful.widget.prompt()
 
-  local taglist = require("widgets.taglist").init(s)
-  local layout  = require("widgets.layout").init(s)
+  local taglist       = require("widgets.taglist").init(s)
+  local layout        = require("widgets.layout").init(s)
+  local client_widget = require("widgets.client").init(s)
 
   -- Create the wibox
   s.mywibox = awful.wibar {
@@ -25,6 +26,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
       { -- Left widgets
         layout = wibox.layout.fixed.horizontal,
         taglist,
+        client_widget,
       },
       wibox.widget.separator { opacity = 0 },
       { -- Right widgets

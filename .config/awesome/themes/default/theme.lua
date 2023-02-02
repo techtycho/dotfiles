@@ -43,12 +43,40 @@ theme.border_color_active = "#56b6c2"
 theme.border_color_marked = "#91231c"
 
 -- ## BAR ##
-theme.bar_height = 25
-theme.widget_margin = 6
+theme.bar_height          = 25
+theme.widget_spacing      = 6
 theme.underline_thickness = 2
 
 -- ## WIDGETS ##
+theme.widget_volume_color   = "#61afef"
+theme.widget_battery_color  = "#c678dd"
 theme.widget_language_color = "#e5c07b"
+theme.widget_date_color     = "#e06c75"
+theme.widget_clock_color    = "#98c379"
+theme.widget_layout_color   = "#ffffff"
+theme.widget_systray_color  = "#383c44"
+
+theme.widget_volume_color_muted = "#fff4"
+
+theme.widget_volume_icon       = "墳 "
+theme.widget_volume_icon_muted = "婢 "
+theme.widget_battery_icon      = " "
+theme.widget_language_icon     = "韛 "
+
+theme.widget_client_fg                  = "#bbbbbb"
+theme.widget_client_separator_color     = "#888c94"
+theme.widget_client_font                = "Liberation Sans 9"
+theme.widget_client_separator_thickness = 1
+
+-- ## EFFECTS ## --
+-- Tagswitch
+theme.tagswitch_bg     = "#000"
+theme.tagswitch_fg     = "#fff"
+theme.tagswitch_font   = "JetBrainsMono Nerd Font 37"
+theme.tagswitch_height = dpi(100)
+theme.tagswitch_width  = dpi(110)
+theme.tagswitch_speed  = 200
+theme.tagswitch_delay  = 0.25
 
 -- There are other variable sets
 -- overriding the default one when

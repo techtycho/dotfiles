@@ -30,6 +30,8 @@ require("modules.notifications")
 require("modules.misc")
 -- Widgets
 require("widgets")
+-- Effects
+require("effects")
 
 -- ## BINDINGS ##
 require("bindings.mouse")

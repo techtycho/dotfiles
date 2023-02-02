@@ -1,4 +1,5 @@
-local wibox = require("wibox")
+local wibox     = require("wibox")
+local beautiful = require("beautiful")
 
 local M = {}
 
@@ -12,10 +13,10 @@ M.widget = wibox.widget {
       left   = 5,
       widget = wibox.container.margin,
     },
-    bg     = "#383c44",
+    bg     = beautiful.widget_systray_color or beautiful.bg_normal or "#fff",
     widget = wibox.container.background,
   },
-  left = 3,
+  left = beautiful.widget_spacing,
   widget = wibox.container.margin,
 }
 
