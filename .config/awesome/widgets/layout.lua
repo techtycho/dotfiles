@@ -11,13 +11,7 @@ M.init = function(s)
       {
         {
           awful.widget.layoutbox {
-            screen  = s,
-            buttons = {
-              awful.button({}, 1, function() awful.layout.inc(1) end),
-              awful.button({}, 3, function() awful.layout.inc(-1) end),
-              awful.button({}, 4, function() awful.layout.inc(-1) end),
-              awful.button({}, 5, function() awful.layout.inc(1) end),
-            },
+            screen = s,
           },
           top    = 3,
           bottom = 4,
@@ -42,6 +36,14 @@ M.init = function(s)
   widget:connect_signal("mouse::leave", function()
     widget:set_bg("#fff0")
   end)
+
+  -- ## LOGIC ##
+  widget.buttons = {
+    awful.button({}, 1, function() awful.layout.inc(1) end),
+    awful.button({}, 3, function() awful.layout.inc(-1) end),
+    awful.button({}, 4, function() awful.layout.inc(-1) end),
+    awful.button({}, 5, function() awful.layout.inc(1) end),
+  }
 
   return widget
 end
