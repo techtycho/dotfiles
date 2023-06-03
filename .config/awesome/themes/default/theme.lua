@@ -33,19 +33,20 @@ theme.border_color_active = "#56b6c2"
 theme.border_color_marked = "#e06c75"
 
 -- Widgets
-theme.widget_volume_color   = "#61afef"
-theme.widget_battery_color  = "#c678dd"
-theme.widget_language_color = "#e5c07b"
-theme.widget_date_color     = "#e06c75"
-theme.widget_clock_color    = "#98c379"
-theme.widget_layout_color   = "#ffffff"
+theme.widget_client_stat_color = "#98c379"
+theme.widget_volume_color      = "#61afef"
+theme.widget_battery_color     = "#c678dd"
+theme.widget_language_color    = "#e5c07b"
+theme.widget_date_color        = "#e06c75"
+theme.widget_clock_color       = "#98c379"
+theme.widget_layout_color      = "#ffffff"
 
 -- Systray
 theme.widget_systray_color = "#383c44"
 
--- Client widget
-theme.widget_client_separator_color = "#888c94"
-theme.widget_client_fg              = "#bbbbbb"
+-- Client title widget
+theme.widget_client_title_separator_color = "#888c94"
+theme.widget_client_title_fg              = "#bbbbbb"
 
 -- Taglist
 theme.taglist_bg_occupied = "#ffffff0a"
@@ -75,11 +76,11 @@ theme.useless_gap  = dpi(5)
 theme.border_width = dpi(1)
 
 -- ## FONTS ##
-theme.font               = "JetBrainsMono Nerd Font 9"
-theme.taglist_font       = "JetBrainsMono Nerd Font 9"
-theme.widget_client_font = "Liberation Sans 9"
+theme.font                     = "JetBrainsMono Nerd Font 9"
+theme.taglist_font             = "JetBrainsMono Nerd Font 9"
+theme.widget_client_title_font = "Liberation Sans 9"
 -- Effects
-theme.tagswitch_font     = "JetBrainsMono Nerd Font 37"
+theme.tagswitch_font           = "JetBrainsMono Nerd Font 37"
 
 -- ## BAR ##
 theme.bar_height           = 25
@@ -93,9 +94,10 @@ theme.widget_volume_icon       = "墳 "
 theme.widget_volume_icon_muted = "婢 "
 theme.widget_battery_icon      = " "
 theme.widget_language_icon     = "韛 "
+theme.widget_client_stat_icon  = " "
 
--- Client widget
-theme.widget_client_separator_thickness = 1
+-- Client title widget
+theme.widget_client_title_separator_thickness = 1
 
 -- ## TAGLIST ##
 theme.taglist_width               = 9

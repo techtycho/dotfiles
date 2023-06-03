@@ -20,7 +20,7 @@ bind.keygroup(bind.mode.global, "apps", {
       function(_, key, event)
         if event == "release" then return end
 
-        if key == "b" then awful.spawn(apps.browser) -- Default
+        if     key == "b" then awful.spawn(apps.browser) -- Default
         elseif key == "s" then awful.spawn(apps.browser .. " " .. apps.search)
         elseif key == "g" then awful.spawn(apps.browser .. " " .. apps.git_serv)
         elseif key == "y" then awful.spawn(apps.browser .. " " .. "youtube.com")
@@ -28,6 +28,8 @@ bind.keygroup(bind.mode.global, "apps", {
         elseif key == "t" then awful.spawn(apps.browser .. " " .. "trello.com")
         elseif key == "r" then awful.spawn(apps.browser .. " " .. "reddit.com")
         else awful.keygrabber.stop(grabber) end
+
+        awful.keygrabber.stop(grabber)
       end
     )
   end),
@@ -46,6 +48,8 @@ bind.keygroup(bind.mode.global, "apps", {
         elseif key == "b" then awful.spawn(apps.files .. " Documents/books")
         elseif key == "w" then awful.spawn("nitrogen")
         else awful.keygrabber.stop(grabber) end
+
+        awful.keygrabber.stop(grabber)
       end
     )
   end),
@@ -64,6 +68,8 @@ bind.keygroup(bind.mode.global, "apps", {
         elseif key == "d" then awful.spawn(apps.editor_dev)
         elseif key == "t" then awful.spawn(apps.terminal .. " -e " .. apps.editor_term)
         else awful.keygrabber.stop(grabber) end
+
+        awful.keygrabber.stop(grabber)
       end
     )
   end),

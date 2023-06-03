@@ -20,8 +20,7 @@ M.widget = wibox.widget {
           widget = wibox.widget.textbox,
         },
         {
-          id     = "volume",
-          text   = "...",
+          id     = "text",
           widget = wibox.widget.textbox,
         },
         layout = wibox.layout.fixed.horizontal,
@@ -35,7 +34,6 @@ M.widget = wibox.widget {
     left   = beautiful.widget_spacing or 6,
     widget = wibox.container.margin,
   },
-  id     = "fg", -- For mute effect
   fg     = beautiful.widget_volume_color or beautiful.fg_color or "#fff",
   widget = wibox.container.background,
 }
@@ -58,23 +56,23 @@ M.widget.buttons = {
 
 M.update = function()
   awful.spawn.easy_async_with_shell(M.cmd, function(stdout)
-    M.widget:get_children_by_id("volume")[1]:set_text(stdout)
+    M.widget:get_children_by_id("text")[1]:set_text(stdout)
   end)
 
   awful.spawn.easy_async_with_shell(M.cmd_mute, function(stdout)
     -- I'm not good at sed and regex, if you have any idea why the command produces
     -- a newline after the word 'off' or 'on', tell me via issues or PR.
     if stdout == "off\n" then
+      M.widget:set_fg(beautiful.widget_volume_color_muted or beautiful.fg_color or "#fff4")
       M.widget:get_children_by_id("icon")[1]:set_text(beautiful.widget_volume_icon_muted or "")
-      M.widget:get_children_by_id("fg")[1]:set_fg(beautiful.widget_volume_color_muted or beautiful.fg_color or "#fff4")
       M.widget:get_children_by_id("underline")[1]:set_color(beautiful.widget_volume_color_muted or beautiful.fg_color or
         "#fff4")
 
       return
     end
 
+    M.widget:set_fg(beautiful.widget_volume_color or beautiful.fg_color or "#fff")
     M.widget:get_children_by_id("icon")[1]:set_text(beautiful.widget_volume_icon or "")
-    M.widget:get_children_by_id("fg")[1]:set_fg(beautiful.widget_volume_color or beautiful.fg_color or "#fff")
     M.widget:get_children_by_id("underline")[1]:set_color(beautiful.widget_volume_color or beautiful.fg_color or "#fff")
   end)
 end

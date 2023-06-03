@@ -17,11 +17,11 @@ M.launcher = config.dmenu {
 
 -- Editor
 M.editor      = "emacs"
-M.editor_dev  = "vscodium"
+M.editor_dev  = "code" -- VSCode
 M.editor_term = "nvim"
 
 -- Web
-M.browser  = "brave"
+M.browser  = "firefox"
 M.search   = "google.com"
 M.git_serv = "github.com"
 
